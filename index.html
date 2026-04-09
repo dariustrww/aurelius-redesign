@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="D Aurelius Group is a Singapore-based sales and marketing company specialising in face-to-face customer acquisition, brand representation, and people development.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="D Aurelius Group | Sales & Marketing Excellence">
+<meta property="og:description" content="Real conversations. Real results. We are the face of your brand.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://d-aureliusgroup.com">
+<title>D Aurelius Group | Sales & Marketing Excellence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C6A55C;
+    --gold-light: #E2CC8F;
+    --gold-bright: #D4AF37;
+    --gold-dark: #8B7332;
+    --black: #0A0A0A;
+    --black-rich: #111111;
+    --black-card: #161616;
+    --black-elevated: #1A1A1A;
+    --cream: #F5F0E8;
+    --white: #FAFAFA;
+    --gray: #888;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Outfit', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+  }
+
+  nav.scrolled {
+    background: rgba(10,10,10,0.97);
+    padding: 1rem 4rem;
+    border-bottom: 1px solid rgba(198,165,92,0.15);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .logo-text {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--gold-light);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover { opacity: 1; }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    padding: 0.65rem 1.8rem !important;
+    border: 1px solid var(--gold) !important;
+    color: var(--gold) !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease !important;
+    letter-spacing: 0.12em !important;
+    font-size: 0.78rem !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--gold) !important;
+    color: var(--black) !important;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 2rem;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(198,165,92,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-bg-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 550px;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-bg-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(2);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, var(--black), transparent);
+    pointer-events: none;
+  }
+
+  .hero-label {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.3s forwards;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 8vw, 7.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.5s forwards;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--gray);
+    max-width: 500px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.7s forwards;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2.8rem;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--black);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.9s forwards;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .hero-cta:hover::before { opacity: 1; }
+  .hero-cta span { position: relative; z-index: 1; }
+  .hero-cta svg { position: relative; z-index: 1; transition: transform 0.3s ease; }
+  .hero-cta:hover svg { transform: translateX(4px); }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.2s forwards;
+    z-index: 2;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease infinite;
+  }
+
+  /* ── GOLD DIVIDER ── */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .divider-line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dark), transparent);
+  }
+
+  .divider-diamond {
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--gold);
+    transform: rotate(45deg);
+  }
+
+  /* ── SECTION STYLES ── */
+  section {
+    padding: 8rem 4rem;
+    position: relative;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--black);
+    overflow: hidden;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .about-text {
+    min-width: 0;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .stat {
+    padding: 2rem;
+    border: 1px solid rgba(198,165,92,0.15);
+    background: var(--black-card);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+  }
+
+  .stat-number {
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+    font-weight: 400;
+  }
+
+  .stats-disclaimer {
+    grid-column: 1 / -1;
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.2);
+    text-align: right;
+    margin-top: -0.5rem;
+  }
+
+  /* ── VALUES ── */
+  .values {
+    background: var(--black-rich);
+  }
+
+  .values-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 5rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .values-grid .value-card:nth-child(4),
+  .values-grid .value-card:nth-child(5) {
+    /* Center the last two cards */
+  }
+
+  .values-bottom-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 740px;
+    margin: 2rem auto 0;
+  }
+
+  .value-card {
+    background: var(--black-card);
+    padding: 2.5rem 2rem;
+    text-align: left;
+    transition: all 0.5s ease;
+    position: relative;
+    border: 1px solid rgba(198,165,92,0.12);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .value-card:hover {
+    border-color: rgba(198,165,92,0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  }
+
+  .value-card:hover::before {
+    opacity: 1;
+  }
+
+  .value-card:hover .value-number {
+    color: var(--gold);
+  }
+
+  .value-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .value-number {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: rgba(198,165,92,0.3);
+    transition: color 0.5s ease;
+    line-height: 1;
+  }
+
+  .value-name {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+  }
+
+  .value-desc {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.7;
+  }
+
+  /* ── SERVICES ── */
+  .services {
+    background: var(--black);
+  }
+
+  .services-header {
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 4rem;
+  }
+
+  .services-header-text {
+    max-width: 550px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    border: 1px solid rgba(198,165,92,0.12);
+    background: var(--black-card);
+    padding: 2.5rem 2rem;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: linear-gradient(to bottom, rgba(198,165,92,0.06), transparent);
+    transition: height 0.5s ease;
+  }
+
+  .service-card:hover::before {
+    height: 100%;
+  }
+
+  .service-card:hover {
+    border-color: rgba(198,165,92,0.3);
+    transform: translateY(-4px);
+  }
+
+  .service-num {
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    color: var(--gold-dark);
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-name {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-desc {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── FOUNDER ── */
+  .founder {
+    background: var(--black-rich);
+    overflow: hidden;
+  }
+
+  .founder-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .founder-image-wrapper {
+    position: relative;
+    aspect-ratio: 2/3;
+    background: var(--black-card);
+    border: 1px solid rgba(198,165,92,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .founder-image-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(198,165,92,0.1);
+    pointer-events: none;
+  }
+
+  .founder-placeholder {
+    font-family: var(--serif);
+    font-size: 6rem;
+    font-weight: 300;
+    color: rgba(198,165,92,0.15);
+    letter-spacing: 0.05em;
+  }
+
+  .founder-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* ── VIDEO INTRO ── */
+  .video-intro {
+    background: var(--black);
+    overflow: hidden;
+  }
+
+  .video-intro-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .video-intro-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 4rem;
+  }
+
+  .video-intro-header p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.8;
+    margin-top: 1rem;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    background: var(--black-card);
+    border: 1px solid rgba(198,165,92,0.2);
+    overflow: hidden;
+  }
+
+  .video-container::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(198,165,92,0.08);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .video-container video,
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .video-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background: linear-gradient(135deg, var(--black-card), var(--black-rich));
+  }
+
+  .video-placeholder:hover .play-btn {
+    transform: scale(1.1);
+    border-color: var(--gold);
+    background: rgba(198,165,92,0.1);
+  }
+
+  .play-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(198,165,92,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    background: rgba(198,165,92,0.05);
+  }
+
+  .play-btn svg {
+    width: 24px;
+    height: 24px;
+    color: var(--gold);
+    margin-left: 3px;
+  }
+
+  .video-placeholder-text {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+  }
+
+  .video-placeholder-sub {
+    font-size: 0.82rem;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .video-caption {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.35);
+    font-style: italic;
+    letter-spacing: 0.03em;
+  }
+
+  /* ── TEAM CAROUSEL ── */
+  .carousel-section {
+    margin-top: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    grid-column: 1 / -1;
+  }
+
+  .carousel-label {
+    text-align: center;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(198,165,92,0.15);
+  }
+
+  .carousel-wrapper::before,
+  .carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--black), transparent);
+  }
+
+  .carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--black), transparent);
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    animation: carouselScroll 40s linear infinite;
+    width: max-content;
+  }
+
+  .carousel-wrapper:hover .carousel-track {
+    animation-play-state: paused;
+  }
+
+  .carousel-slide {
+    flex-shrink: 0;
+    width: 500px;
+    height: 340px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .carousel-slide:hover img {
+    transform: scale(1.03);
+  }
+
+  /* Placeholder slides for images you'll add */
+  .carousel-slide-placeholder {
+    flex-shrink: 0;
+    width: 500px;
+    height: 340px;
+    background: var(--black-card);
+    border: 1px dashed rgba(198,165,92,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .carousel-slide-placeholder svg {
+    width: 32px;
+    height: 32px;
+    color: rgba(198,165,92,0.25);
+  }
+
+  .carousel-slide-placeholder span {
+    font-size: 0.75rem;
+    color: rgba(198,165,92,0.3);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(198,165,92,0.25);
+    background: transparent;
+    color: var(--gold);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-btn:hover {
+    background: rgba(198,165,92,0.1);
+    border-color: var(--gold);
+  }
+
+  .carousel-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @keyframes carouselScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @media (max-width: 768px) {
+    .carousel-slide,
+    .carousel-slide-placeholder {
+      width: 320px;
+      height: 220px;
+    }
+  }
+
+  .founder-content .section-label { margin-bottom: 1rem; }
+
+  .founder-name {
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .founder-role {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+  }
+
+  .founder-content p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .founder-quote {
+    margin-top: 2.5rem;
+    padding-left: 2rem;
+    border-left: 2px solid var(--gold);
+  }
+
+  .founder-quote p {
+    font-family: var(--serif);
+    font-size: 1.3rem !important;
+    font-style: italic;
+    color: var(--gold-light) !important;
+    line-height: 1.6 !important;
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    background: var(--black-rich);
+    padding: 8rem 4rem;
+  }
+
+  .contact-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+  }
+
+  .contact-header .section-label {
+    margin-bottom: 1rem;
+  }
+
+  .contact-header h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  .contact-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-block-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .contact-detail svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--gold);
+  }
+
+  .contact-detail p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+  }
+
+  .contact-detail a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .contact-detail a:hover {
+    color: var(--gold-light);
+  }
+
+  .contact-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(198,165,92,0.15);
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-form-section .contact-block-title {
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: var(--black-card);
+    border: 1px solid rgba(198,165,92,0.15);
+    border-radius: 4px;
+    color: var(--white);
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    transition: border-color 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .form-group input::placeholder {
+    color: rgba(255,255,255,0.25);
+  }
+
+  .form-group input:focus {
+    border-color: var(--gold);
+  }
+
+  .form-submit {
+    padding: 0.9rem 2.5rem;
+    background: var(--gold);
+    border: none;
+    border-radius: 4px;
+    color: var(--black);
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.3rem;
+  }
+
+  .form-submit:hover {
+    background: var(--gold-light);
+  }
+
+  .contact-map {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(198,165,92,0.12);
+    height: 100%;
+    min-height: 480px;
+  }
+
+  .contact-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    border: none;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: var(--black);
+    text-align: center;
+    padding: 10rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(198,165,92,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-section .section-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.5);
+    max-width: 550px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 3.5rem;
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+  }
+
+  .cta-btn svg { transition: transform 0.3s ease; }
+  .cta-btn:hover svg { transform: translateX(4px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black-rich);
+    border-top: 1px solid rgba(198,165,92,0.1);
+    padding: 4rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--gold-light);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover { color: var(--gold-light); }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold);
+    transition: all 0.3s ease;
+  }
+
+  .footer-social a:hover {
+    background: var(--gold);
+    color: var(--black);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── MOBILE MENU ── */
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 110;
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--gold);
+    margin: 6px 0;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+  .mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,10,0.98);
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 3.5vh, 2.5rem);
+    padding: 5rem 2rem 2rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .mobile-overlay.active { display: flex; }
+
+  .mobile-overlay a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--serif);
+    font-size: clamp(1.4rem, 3.5vh, 2rem);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-overlay a:hover { opacity: 1; color: var(--gold-light); }
+
+  .mobile-overlay .mobile-cta {
+    margin-top: 0.5rem;
+    padding: 0.7rem 2rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    section { padding: 6rem 3rem; }
+    nav { padding: 1.2rem 2rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 4rem; }
+    .values-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .values-bottom-row { gap: 1.5rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .founder-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .services-header { flex-direction: column; align-items: flex-start; }
+    .play-btn { width: 64px; height: 64px; }
+  }
+
+  @media (max-width: 768px) {
+    section { padding: 4rem 1.25rem; }
+    nav { padding: 1rem 1.25rem; }
+
+    /* Mobile menu toggle */
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: block; }
+
+    /* Hero */
+    .hero { min-height: 100svh; padding: 0 1.25rem; }
+    .hero h1 { font-size: 2.8rem; }
+    .hero-sub { font-size: 0.95rem; max-width: 100%; padding: 0 0.5rem; }
+    .hero-cta { padding: 0.9rem 2rem; font-size: 0.75rem; }
+    .hero-label { font-size: 0.65rem; letter-spacing: 0.3em; margin-bottom: 2rem; }
+    .hero-bg-logo { width: 300px; height: 300px; }
+    .scroll-indicator { bottom: 2rem; }
+
+    /* Section titles */
+    .section-title { font-size: 2rem; }
+    .section-label { font-size: 0.65rem; }
+
+    /* About */
+    .about { overflow-x: hidden; }
+    .about-grid { gap: 3rem; max-width: 100%; }
+    .about-grid > * { min-width: 0; max-width: 100%; overflow: hidden; }
+    .about-text p { font-size: 0.95rem; word-wrap: break-word; overflow-wrap: break-word; }
+    .carousel-section { max-width: 100% !important; }
+    .about-stats { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .stat { padding: 1.2rem 1rem; }
+    .stat-number { font-size: 1.8rem; margin-bottom: 0.3rem; }
+    .stat-label { font-size: 0.68rem; letter-spacing: 0.1em; }
+
+    /* Carousel */
+    .carousel-section { margin-top: 3rem; }
+    .carousel-label { font-size: 0.65rem; }
+    .carousel-slide,
+    .carousel-slide-placeholder {
+      width: 280px;
+      height: 200px;
+    }
+    .carousel-track { gap: 1rem; }
+    .carousel-wrapper::before,
+    .carousel-wrapper::after { width: 40px; }
+    .carousel-nav { gap: 0.75rem; margin-top: 1rem; }
+    .carousel-btn { width: 36px; height: 36px; }
+
+    /* Values */
+    .values-header { margin-bottom: 3rem; }
+    .values-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .values-grid .value-card:nth-child(3) { grid-column: 1 / -1; max-width: 400px; margin: 0 auto; width: 100%; }
+    .values-bottom-row { grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 100%; }
+    .value-card { padding: 2rem 1.25rem; }
+    .value-number { font-size: 1.8rem; }
+    .value-name { font-size: 1.1rem; }
+    .value-desc { font-size: 0.82rem; }
+
+    /* Services */
+    .services-grid { gap: 1.25rem; }
+    .service-card { padding: 2rem 1.5rem; }
+    .service-name { font-size: 1.6rem; }
+    .service-desc { font-size: 0.88rem; }
+
+    /* Founder */
+    .founder-grid { gap: 2.5rem; }
+    .founder-image-wrapper { aspect-ratio: 3/4; }
+    .founder-name { font-size: 2.2rem; }
+    .founder-role { margin-bottom: 1.5rem; }
+    .founder-content p { font-size: 0.95rem; }
+    .founder-quote { padding-left: 1.25rem; }
+    .founder-quote p { font-size: 1.1rem !important; }
+
+    /* Video */
+    .video-intro-header { margin-bottom: 2.5rem; }
+    .video-intro-header p { font-size: 0.92rem; }
+    .play-btn { width: 56px; height: 56px; }
+    .video-placeholder-text { font-size: 1rem; }
+    .video-placeholder-sub { font-size: 0.72rem; }
+    .video-caption { font-size: 0.78rem; margin-top: 1.5rem; }
+
+    /* Contact */
+    .contact { padding: 4rem 1.25rem; }
+    .contact-header { margin-bottom: 2.5rem; }
+    .contact-body { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-block-title { font-size: 1.3rem; }
+    .contact-map { min-height: 250px !important; height: 250px !important; }
+    .contact-map iframe { min-height: 250px !important; height: 250px !important; }
+
+    /* CTA */
+    .cta-section { padding: 6rem 1.25rem; }
+    .cta-sub { font-size: 0.95rem; }
+    .cta-btn { padding: 0.9rem 2.5rem; font-size: 0.75rem; }
+
+    /* Footer */
+    .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+    footer { padding: 3rem 1.25rem; }
+    .footer-links { gap: 1.5rem; }
+    .footer-brand { font-size: 0.9rem; }
+  }
+
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 2.2rem; }
+    .values-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .values-grid .value-card:nth-child(3) { max-width: 100%; }
+    .values-bottom-row { grid-template-columns: 1fr; gap: 1rem; max-width: 100%; }
+    .about-stats { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .stat { padding: 1rem 0.75rem; }
+    .stat-number { font-size: 1.5rem; }
+    .stat-label { font-size: 0.6rem; letter-spacing: 0.08em; }
+    .carousel-slide,
+    .carousel-slide-placeholder {
+      width: 240px;
+      height: 170px;
+    }
+    .founder-name { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="logo-icon"><img src="https://cdn.prod.website-files.com/689a126646e7dc6b882a5aa5/689a18c0413b7b2a935cd86e_image_2025-08-12_002224256.png" alt="D Aurelius Group Logo"></div>
+    <span class="logo-text">Aurelius</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#values">Values</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#founder">Founder</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE OVERLAY -->
+<div class="mobile-overlay" id="mobileOverlay">
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#values" onclick="closeMobileMenu()">Values</a>
+  <a href="#services" onclick="closeMobileMenu()">Services</a>
+  <a href="#founder" onclick="closeMobileMenu()">Founder</a>
+  <a href="careers.html" onclick="closeMobileMenu()">Careers</a>
+  <a href="#contact" class="mobile-cta" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-logo"><img src="https://cdn.prod.website-files.com/689a126646e7dc6b882a5aa5/689a18c0413b7b2a935cd86e_image_2025-08-12_002224256.png" alt="" aria-hidden="true"></div>
+  <div class="hero-label">D Aurelius Group</div>
+  <h1>Real Conversations.<br><em>Real Results.</em></h1>
+  <p class="hero-sub">We are the face of your brand. We build the people behind it.</p>
+  <a href="#about" class="hero-cta">
+    <span>Discover Our Approach</span>
+    <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 6H17M17 6L12 1M17 6L12 11" stroke="currentColor" stroke-width="1.5"/></svg>
+  </a>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">We Grow People.<br>The Results <em>Follow.</em></h2>
+      <p>Aurelius is a sales and marketing company built on one idea: when you invest in people, the results take care of themselves. We specialise in face-to-face sales because we believe real relationships still close the best deals. Our clients trust us to represent their brand on the ground, and we take that seriously.</p>
+      <p>We've built a team of driven individuals who are trained, coached, and developed from day one. That's what makes us different. Our people don't just pitch products. They build trust, create conversations, and deliver outcomes that matter.</p>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat">
+        <div class="stat-number">$6.4M</div>
+        <div class="stat-label">Contract Value Generated</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Client Focused</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">1,500+</div>
+        <div class="stat-label">Customers Converted</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Commitment</div>
+      </div>
+      <p class="stats-disclaimer">*Figures since incorporation</p>
+    </div>
+    <!-- TEAM PHOTO CAROUSEL -->
+    <div class="carousel-section reveal">
+      <div class="carousel-label">Life at Aurelius</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Set 1 (originals) -->
+          <div class="carousel-slide">
+            <img src="https://cdn.prod.website-files.com/689a126646e7dc6b882a5aa5/689a126646e7dc6b882a5b76_IMG_1813.JPG" alt="Aurelius Team Celebration">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/syfe-team.jpg" alt="Team at Syfe Office">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/salesworks-30th.jpg" alt="Salesworks 30th Anniversary">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/office-group.jpg" alt="Office Team Meeting">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/ballroom-event.jpg" alt="Ballroom Gala Event">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/dinner-team.jpg" alt="Team Dinner">
+          </div>
+          <!-- Set 2 (duplicates for seamless loop) -->
+          <div class="carousel-slide">
+            <img src="https://cdn.prod.website-files.com/689a126646e7dc6b882a5aa5/689a126646e7dc6b882a5b76_IMG_1813.JPG" alt="Aurelius Team Celebration">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/syfe-team.jpg" alt="Team at Syfe Office">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/salesworks-30th.jpg" alt="Salesworks 30th Anniversary">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/office-group.jpg" alt="Office Team Meeting">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/ballroom-event.jpg" alt="Ballroom Gala Event">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/dinner-team.jpg" alt="Team Dinner">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn" onclick="document.getElementById('carouselTrack').style.animationDirection = 'reverse'" aria-label="Scroll left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn" onclick="document.getElementById('carouselTrack').style.animationDirection = 'normal'" aria-label="Scroll right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values" id="values">
+  <div class="values-header reveal">
+    <div class="section-label">What We Stand For</div>
+    <h2 class="section-title">Core <em>Values</em></h2>
+    <div class="divider" style="margin-top:1.5rem;">
+      <div class="divider-line"></div>
+      <div class="divider-diamond"></div>
+      <div class="divider-line"></div>
+    </div>
+  </div>
+  <div class="values-grid reveal">
+    <div class="value-card">
+      <div class="value-header">
+        <div class="value-number">1</div>
+        <div class="value-name">Grit</div>
+      </div>
+      <p class="value-desc">Results don't come easy, and we don't pretend they do. What sets our team apart is the willingness to push through when things get tough. That resilience is why our clients keep coming back.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-header">
+        <div class="value-number">2</div>
+        <div class="value-name">Respect</div>
+      </div>
+      <p class="value-desc">We treat every client, every teammate, and every customer interaction with the same care. How our team carries itself on the ground is a direct reflection of the brands we represent.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-header">
+        <div class="value-number">3</div>
+        <div class="value-name">Excellence</div>
+      </div>
+      <p class="value-desc">Not perfection. Progress. We hold ourselves to a high standard because our clients deserve nothing less. Every campaign, every interaction, every result is a chance to raise the bar.</p>
+    </div>
+  </div>
+  <div class="values-bottom-row reveal">
+    <div class="value-card">
+      <div class="value-header">
+        <div class="value-number">4</div>
+        <div class="value-name">Achievement</div>
+      </div>
+      <p class="value-desc">We measure what matters and celebrate the wins, big and small. Our culture of recognition keeps our team hungry, and that energy translates directly into results for the brands we work with.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-header">
+        <div class="value-number">5</div>
+        <div class="value-name">Trust</div>
+      </div>
+      <p class="value-desc">We say what we mean and follow through. Our clients and our people always know where they stand with us. No hidden agendas. Just honest work that speaks for itself.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header reveal">
+    <div class="services-header-text">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">How We <em>Deliver</em></h2>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <h3 class="service-name">Sales</h3>
+      <p class="service-desc">We put trained, confident people in front of your customers. Real conversations. Real handshakes. In a world that hides behind screens, we still believe the best sales happen face to face. That's our edge, and it's what drives measurable results.</p>
+    </div>
+    <div class="service-card reveal">
+      <h3 class="service-name">Marketing</h3>
+      <p class="service-desc">We take your brand to where your customers actually are. On the ground, in the community, face to face. It's not about impressions or vanity metrics. It's about making sure the right people hear the right message and take action.</p>
+    </div>
+    <div class="service-card reveal">
+      <h3 class="service-name">Strategy</h3>
+      <p class="service-desc">Before we make a move, we make a plan. We study the market, understand the audience, and map out the clearest path to results. You won't have to hope your campaign works. You'll know, because we've done the homework.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder" id="founder">
+  <div class="founder-grid">
+    <div class="founder-image-wrapper reveal">
+      <img src="images/darius-tan.jpg" alt="Darius Tan, Managing Director">
+    </div>
+    <div class="founder-content reveal">
+      <div class="section-label">Meet Our Founder</div>
+      <h2 class="founder-name">Darius Tan</h2>
+      <div class="founder-role">Managing Director</div>
+      <p>I started Aurelius because I believe great results come from great people. When you train them well, back them fully, and hold them to a high standard, they deliver. That's the promise I make to every client and every person who joins this team. I still lead from the front because the details matter, and our reputation is built on them.</p>
+      <div class="founder-quote">
+        <p>"You don't need to have it all figured out. You just need to be willing to start."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO INTRODUCTION (hidden until video is ready — remove display:none to show) -->
+<section class="video-intro" id="video" style="display:none;"
+  <div class="video-intro-inner">
+    <div class="video-intro-header reveal">
+      <div class="section-label">Before You Walk In</div>
+      <h2 class="section-title">See What It's<br>Really <em>Like</em></h2>
+      <p>We'd rather show you than tell you. Watch this short video to get a feel for the culture, the people, and what your first few weeks could look like.</p>
+    </div>
+    <div class="video-container reveal">
+      <!-- Replace the placeholder below with your actual video embed -->
+      <!-- Option 1: YouTube/Vimeo embed -->
+      <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+      <!-- Option 2: Self-hosted video -->
+      <!-- <video controls poster="your-thumbnail.jpg"><source src="your-video.mp4" type="video/mp4"></video> -->
+      <div class="video-placeholder" id="videoPlaceholder">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+        <div class="video-placeholder-text">Watch the Introduction</div>
+        <div class="video-placeholder-sub">2 &ndash; 3 min</div>
+      </div>
+    </div>
+    <p class="video-caption reveal">No pressure. Just a few minutes to see if this feels like the right fit for you.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="join">
+  <div class="divider reveal" style="margin-bottom:3rem;">
+    <div class="divider-line"></div>
+    <div class="divider-diamond"></div>
+    <div class="divider-line"></div>
+  </div>
+  <h2 class="section-title reveal">Let's Build Something<br><em>Worth Talking About.</em></h2>
+  <p class="cta-sub reveal">Whether you're a brand looking for a sales partner that delivers, or someone ready for a career that actually challenges you, we'd like to hear from you.</p>
+  <a href="#contact-form" class="cta-btn reveal">
+    <span>Get In Touch</span>
+    <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 6H17M17 6L12 1M17 6L12 11" stroke="currentColor" stroke-width="1.5"/></svg>
+  </a>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-header reveal">
+    <div class="section-label">GET IN TOUCH</div>
+    <h2>Let's Start a <em>Conversation.</em></h2>
+  </div>
+  <div class="contact-body">
+    <div class="contact-left reveal">
+      <h3 class="contact-block-title">Locate Us</h3>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <svg width="18" height="22" viewBox="0 0 18 22" fill="none"><path d="M9 0C4.03 0 0 4.03 0 9c0 6.75 9 13 9 13s9-6.25 9-13c0-4.97-4.03-9-9-9zm0 12.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z" fill="currentColor"/></svg>
+          <p>110 Robinson Rd, #02-00<br>Singapore 068901</p>
+        </div>
+        <div class="contact-detail">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M9 4.5V9l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <p>Monday to Friday<br>9am to 6pm</p>
+        </div>
+        <div class="contact-detail">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M17 12.5c-1.4 0-2.7-.2-4-.7a.9.9 0 00-.9.2l-2.2 2.2A13.2 13.2 0 014.8 9.1l2.2-2.2a.9.9 0 00.2-.9c-.5-1.3-.7-2.6-.7-4C6.5.4 6.1 0 5.5 0H1.5C.9 0 0 .4 0 1.5 0 10.6 7.4 18 16.5 18c1 0 1.5-.9 1.5-1.5v-4z" fill="currentColor"/></svg>
+          <p><a href="tel:93391548">(M) 93391548</a>&nbsp;&nbsp;<a href="tel:60221005">(T) 60221005</a></p>
+        </div>
+        <div class="contact-detail">
+          <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M16 0H2C.9 0 0 .9 0 2v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 4l-7 4.5L2 4V2l7 4.5L16 2v2z" fill="currentColor"/></svg>
+          <p><a href="mailto:admin@d-aureliusgroup.com">admin@d-aureliusgroup.com</a></p>
+        </div>
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-form-section" id="contact-form">
+        <h3 class="contact-block-title">Reach Out To Us</h3>
+        <form class="contact-form" action="https://form.jotform.com/242739042821455" method="GET" target="_blank">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label>Contact Number</label>
+            <input type="tel" name="phone" placeholder="e.g. 8123 4567">
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="Enter your email here" required>
+          </div>
+          <button type="submit" class="form-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="contact-map reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.822!2d103.8371!3d1.2778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da190f4c8b1e2d%3A0x7e8b0b0b0b0b0b0b!2s110%20Robinson%20Rd%2C%20Singapore%20068901!5e0!3m2!1sen!2ssg!4v1700000000000!5m2!1sen!2ssg" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">D Aurelius Group</div>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#values">Values</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/company/d-aurelius-group-pte-ltd/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+    <div class="footer-copy">&copy; 2026 D Aurelius Group. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const overlay = document.getElementById('mobileOverlay');
+
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+  });
+
+  function closeMobileMenu() {
+    menuBtn.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+</script>
+
+<!-- Vercel Analytics -->
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
