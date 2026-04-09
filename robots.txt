@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://d-aureliusgroup.com/sitemap.xml
