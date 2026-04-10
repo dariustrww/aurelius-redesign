@@ -525,6 +525,31 @@
     font-weight: 500;
     color: var(--gold-light);
     letter-spacing: 0.05em;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .value-name .first-letter {
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-right: 0.05em;
+  }
+
+  .values-acronym {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-top: 1rem;
+  }
+
+  .values-acronym span {
+    color: var(--gold);
+    font-weight: 600;
   }
 
   .value-desc {
@@ -1648,6 +1673,7 @@
   <div class="values-header reveal">
     <div class="section-label">What We Stand For</div>
     <h2 class="section-title">Core <em>Values</em></h2>
+    <div class="values-acronym">The <span>G.R.E.A.T.</span> Standard</div>
     <div class="divider" style="margin-top:1.5rem;">
       <div class="divider-line"></div>
       <div class="divider-diamond"></div>
@@ -1658,21 +1684,21 @@
     <div class="value-card">
       <div class="value-header">
         <div class="value-number">1</div>
-        <div class="value-name">Grit</div>
+        <div class="value-name"><span class="first-letter">G</span>rit</div>
       </div>
       <p class="value-desc">Results don't come easy, and we don't pretend they do. What sets our team apart is the willingness to push through when things get tough. That resilience is why our clients keep coming back.</p>
     </div>
     <div class="value-card">
       <div class="value-header">
         <div class="value-number">2</div>
-        <div class="value-name">Respect</div>
+        <div class="value-name"><span class="first-letter">R</span>espect</div>
       </div>
       <p class="value-desc">We treat every client, every teammate, and every customer interaction with the same care. How our team carries itself on the ground is a direct reflection of the brands we represent.</p>
     </div>
     <div class="value-card">
       <div class="value-header">
         <div class="value-number">3</div>
-        <div class="value-name">Excellence</div>
+        <div class="value-name"><span class="first-letter">E</span>xcellence</div>
       </div>
       <p class="value-desc">Not perfection. Progress. We hold ourselves to a high standard because our clients deserve nothing less. Every campaign, every interaction, every result is a chance to raise the bar.</p>
     </div>
@@ -1681,14 +1707,14 @@
     <div class="value-card">
       <div class="value-header">
         <div class="value-number">4</div>
-        <div class="value-name">Achievement</div>
+        <div class="value-name"><span class="first-letter">A</span>chievement</div>
       </div>
       <p class="value-desc">We measure what matters and celebrate the wins, big and small. Our culture of recognition keeps our team hungry, and that energy translates directly into results for the brands we work with.</p>
     </div>
     <div class="value-card">
       <div class="value-header">
         <div class="value-number">5</div>
-        <div class="value-name">Trust</div>
+        <div class="value-name"><span class="first-letter">T</span>rust</div>
       </div>
       <p class="value-desc">We say what we mean and follow through. Our clients and our people always know where they stand with us. No hidden agendas. Just honest work that speaks for itself.</p>
     </div>
