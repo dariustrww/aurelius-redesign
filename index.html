@@ -1495,7 +1495,7 @@
     <li><a href="#values">Values</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#founder">Founder</a></li>
-    <li><a href="careers.html">Careers</a></li>
+    <li><a href="/careers">Careers</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
   <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
@@ -1509,7 +1509,7 @@
   <a href="#values" onclick="closeMobileMenu()">Values</a>
   <a href="#services" onclick="closeMobileMenu()">Services</a>
   <a href="#founder" onclick="closeMobileMenu()">Founder</a>
-  <a href="careers.html" onclick="closeMobileMenu()">Careers</a>
+  <a href="/careers" onclick="closeMobileMenu()">Careers</a>
   <a href="#contact" class="mobile-cta" onclick="closeMobileMenu()">Contact</a>
 </div>
 
@@ -1839,7 +1839,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#values">Values</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="careers.html">Careers</a></li>
+      <li><a href="/careers">Careers</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="footer-social">
@@ -1882,6 +1882,29 @@
     menuBtn.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
+  }
+
+  // Clean hash from URL after scrolling to section
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const hash = link.getAttribute('href');
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          history.replaceState(null, '', window.location.pathname);
+        }, 800);
+      }
+    });
+  });
+
+  // Also clean hash on page load if present (e.g. from careers page links)
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      setTimeout(() => {
+        history.replaceState(null, '', window.location.pathname);
+      }, 1200);
+    }
   }
 </script>
 
