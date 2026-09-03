@@ -15,6 +15,7 @@ Hosted on **Vercel**, auto-deployed from the `main` branch on GitHub.
 | `styles.css` | **All styling for every page** — palette, theme, components, and page sections (careers-only styles are grouped at the bottom) |
 | `main.js` | **All shared behaviour** — light/dark toggle, scroll-reveal, sticky nav, mobile menu |
 | `images/` | All image assets (logo `aurelius-crest.png`, team photos) |
+| `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png` | Browser-tab and home-screen icons, generated from the crest by `scripts/make-favicons.py` (needs Pillow: `python3 -m pip install pillow`). Re-run it if the logo changes. |
 | `vercel.json` | Clean URLs + security headers (incl. CSP) |
 | `sitemap.xml`, `robots.txt` | SEO |
 
