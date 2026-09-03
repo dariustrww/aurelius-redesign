@@ -1,1 +1,9 @@
 .vercel
+.DS_Store
+*.DS_Store
+
+# Local-only digital business card — intentionally kept off the live site
+name-card.html
+
+# Scratch / preview artifacts
+.playwright-mcp/

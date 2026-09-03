@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Singapore face-to-face sales and marketing agency. We turn real conversations into real results for brands that need ground-level customer acquisition.">
+<meta name="description" content="D Aurelius Group is a Singapore sales and marketing agency. We represent brands on the ground and turn real conversations into results.">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="D Aurelius Group | Face-to-Face Sales Agency Singapore">
-<meta property="og:description" content="Singapore face-to-face sales and marketing agency. We turn real conversations into real results for brands that need ground-level customer acquisition.">
+<meta property="og:title" content="D Aurelius Group | Sales &amp; Marketing Agency Singapore">
+<meta property="og:description" content="D Aurelius Group is a Singapore sales and marketing agency. We represent brands on the ground and turn real conversations into results.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://d-aureliusgroup.com">
-<title>D Aurelius Group | Face-to-Face Sales Agency Singapore</title>
+<title>D Aurelius Group | Sales &amp; Marketing Agency Singapore</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -76,12 +76,10 @@
   /* light mode: gold outlines for definition */
   :root[data-theme="light"] .stat,
   :root[data-theme="light"] .value-card,
-  :root[data-theme="light"] .service-card,
   :root[data-theme="light"] .founder-image-wrapper { border: 1.5px solid var(--gold); }
   :root[data-theme="light"] .form-group input { border: 1px solid var(--gold); }
   :root[data-theme="light"] .form-group input:focus { border-color: var(--gold-bright); }
-  :root[data-theme="light"] .value-card:hover,
-  :root[data-theme="light"] .service-card:hover { border-color: var(--gold-bright); }
+  :root[data-theme="light"] .value-card:hover { border-color: var(--gold-bright); }
   :root[data-theme="light"] nav.scrolled { border-bottom-color: rgba(var(--gold-rgb),0.45); }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -612,11 +610,7 @@
     line-height: 1.7;
   }
 
-  /* ── SERVICES ── */
-  .services {
-    background: var(--black);
-  }
-
+  /* ── SECTION HEADER (used by "How It Works") ── */
   .services-header {
     max-width: 1200px;
     margin: 0 auto 5rem;
@@ -628,72 +622,6 @@
 
   .services-header-text {
     max-width: 550px;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .service-card {
-    border: 1px solid rgba(var(--gold-rgb),0.12);
-    background: var(--black-card);
-    padding: 2.5rem 2rem;
-    transition: all 0.5s ease;
-    position: relative;
-    overflow: hidden;
-    border-radius: 6px;
-  }
-
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 0;
-    background: linear-gradient(to bottom, rgba(var(--gold-rgb),0.06), transparent);
-    transition: height 0.5s ease;
-  }
-
-  .service-card:hover::before {
-    height: 100%;
-  }
-
-  .service-card:hover {
-    border-color: rgba(var(--gold-rgb),0.3);
-    transform: translateY(-4px);
-  }
-
-  .service-num {
-    font-family: var(--serif);
-    font-size: 0.9rem;
-    color: var(--gold-dark);
-    letter-spacing: 0.1em;
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .service-name {
-    font-family: var(--serif);
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--white);
-    margin-bottom: 0.8rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .service-desc {
-    font-size: 0.92rem;
-    color: rgba(var(--fg-rgb),0.5);
-    line-height: 1.7;
-    position: relative;
-    z-index: 1;
   }
 
   /* ── FOUNDER ── */
@@ -743,119 +671,6 @@
     height: 100%;
     object-fit: cover;
     object-position: center top;
-  }
-
-  /* ── VIDEO INTRO ── */
-  .video-intro {
-    background: var(--black);
-    overflow: hidden;
-  }
-
-  .video-intro-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .video-intro-header {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 4rem;
-  }
-
-  .video-intro-header p {
-    font-size: 1.05rem;
-    color: rgba(var(--fg-rgb),0.5);
-    line-height: 1.8;
-    margin-top: 1rem;
-  }
-
-  .video-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    aspect-ratio: 16/9;
-    background: var(--black-card);
-    border: 1px solid rgba(var(--gold-rgb),0.2);
-    overflow: hidden;
-  }
-
-  .video-container::before {
-    content: '';
-    position: absolute;
-    inset: 8px;
-    border: 1px solid rgba(var(--gold-rgb),0.08);
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  .video-container video,
-  .video-container iframe {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .video-placeholder {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    background: linear-gradient(135deg, var(--black-card), var(--black-rich));
-  }
-
-  .video-placeholder:hover .play-btn {
-    transform: scale(1.1);
-    border-color: var(--gold);
-    background: rgba(var(--gold-rgb),0.1);
-  }
-
-  .play-btn {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 2px solid rgba(var(--gold-rgb),0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease;
-    background: rgba(var(--gold-rgb),0.05);
-  }
-
-  .play-btn svg {
-    width: 24px;
-    height: 24px;
-    color: var(--gold);
-    margin-left: 3px;
-  }
-
-  .video-placeholder-text {
-    font-family: var(--serif);
-    font-size: 1.2rem;
-    color: var(--gold-light);
-    letter-spacing: 0.05em;
-  }
-
-  .video-placeholder-sub {
-    font-size: 0.82rem;
-    color: var(--gray);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .video-caption {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.85rem;
-    color: rgba(var(--fg-rgb),0.35);
-    font-style: italic;
-    letter-spacing: 0.03em;
   }
 
   /* ── TEAM CAROUSEL ── */
@@ -1438,10 +1253,8 @@
     .about-grid { grid-template-columns: 1fr; gap: 4rem; }
     .values-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     .values-bottom-row { gap: 1.5rem; }
-    .services-grid { grid-template-columns: 1fr; }
     .founder-grid { grid-template-columns: 1fr; gap: 3rem; }
     .services-header { flex-direction: column; align-items: flex-start; }
-    .play-btn { width: 64px; height: 64px; }
   }
 
   @media (max-width: 768px) {
@@ -1499,12 +1312,6 @@
     .value-number { font-size: 1.8rem; }
     .value-name { font-size: 1.1rem; }
     .value-desc { font-size: 0.82rem; }
-
-    /* Services */
-    .services-grid { gap: 1.25rem; }
-    .service-card { padding: 2rem 1.5rem; }
-    .service-name { font-size: 1.6rem; }
-    .service-desc { font-size: 0.88rem; }
 
     /* Founder */
     .founder-grid { gap: 2.5rem; }
@@ -1566,7 +1373,7 @@
 <!-- NAV -->
 <nav id="navbar">
   <a href="#" class="nav-logo">
-    <div class="logo-icon"><img src="https://cdn.prod.website-files.com/689a126646e7dc6b882a5aa5/689a18c0413b7b2a935cd86e_image_2025-08-12_002224256.png" alt="D Aurelius Group Logo"></div>
+    <div class="logo-icon"><img src="/images/aurelius-crest.png" alt="D Aurelius Group Logo"></div>
     <span class="logo-text">Aurelius</span>
   </a>
   <div class="nav-right">
@@ -1598,7 +1405,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg-logo"><img src="https://cdn.prod.website-files.com/689a126646e7dc6b882a5aa5/689a18c0413b7b2a935cd86e_image_2025-08-12_002224256.png" alt="" aria-hidden="true"></div>
+  <div class="hero-bg-logo"><img src="/images/aurelius-crest.png" alt="" aria-hidden="true"></div>
   <div class="hero-label">D Aurelius Group</div>
   <h1>Real Conversations<br><em>Real Results</em></h1>
   <p class="hero-sub">We are the face of your brand. We build the people behind it.</p>
@@ -1627,7 +1434,7 @@
         <div class="stat-label">Contract Value Generated</div>
       </div>      <div class="stat">
         <div class="stat-number">1,500+</div>
-        <div class="stat-label">Customers Converted</div>
+        <div class="stat-label">Customers Acquired</div>
       </div>      <p class="stats-disclaimer">*Figures since incorporation</p>
     </div>
     <!-- HOW IT WORKS -->
@@ -1864,7 +1671,7 @@
       <div class="contact-divider"></div>
       <div class="contact-form-section" id="contact-form">
         <h3 class="contact-block-title">Reach Out To Us</h3>
-        <form class="contact-form" action="https://form.jotform.com/242739042821455" method="GET" target="_blank">
+        <form class="contact-form" action="https://form.jotform.com/242739042821455" method="POST" target="_blank">
           <div class="form-group">
             <label>Name</label>
             <input type="text" name="name" placeholder="Your Name" required>
